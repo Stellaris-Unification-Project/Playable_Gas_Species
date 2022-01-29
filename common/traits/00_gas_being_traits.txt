@@ -1,0 +1,276 @@
+trait_gas_aliens = {
+	icon = "gfx/interface/icons/traits/trait_gas_aliens.dds"
+	cost = 0
+	sorting_priority = 20
+	allowed_archetypes = { GASEOUS }
+	modification = no
+	modifier = {
+		pop_growth_speed = -0.1
+	}
+}
+
+trait_triple_bond = {
+	icon = "gfx/interface/icons/traits/trait_triple_bond.dds"
+	cost = 3
+	opposites = { "trait_double_bond" "trait_single_bond" }
+	allowed_archetypes = { GASEOUS }
+	modification = yes
+	modifier = {
+		army_damage_mult = 0.15
+		planet_jobs_worker_produces_mult = 0.06
+		leader_age = 70
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+trait_double_bond = {
+	icon = "gfx/interface/icons/traits/trait_double_bond.dds"
+	cost = 2
+	opposites = { "trait_single_bond" "trait_triple_bond" }
+	allowed_archetypes = { GASEOUS }
+	modification = yes
+	modifier = {
+		army_damage_mult = 0.10
+		planet_jobs_worker_produces_mult = 0.03
+		leader_age = 30
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_single_bond = {
+	icon = "gfx/interface/icons/traits/trait_single_bond.dds"
+	cost = -3
+	opposites = { "trait_double_bond" "trait_triple_bond" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		army_damage_mult = -0.15
+		planet_jobs_worker_produces_mult = -0.015
+		leader_age = -15
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_low_energy = {
+	icon = "gfx/interface/icons/traits/trait_low_energy.dds"
+	cost = 1
+	opposites = { "trait_high_energy" }
+
+	allowed_archetypes = { GASEOUS }
+
+	modifier = {
+		pop_housing_usage_mult = -0.2
+	}
+}
+
+trait_high_energy = {
+	icon = "gfx/interface/icons/traits/trait_high_energy.dds"
+	cost = -1
+	opposites = { "trait_low_energy" }
+
+	allowed_archetypes = { GASEOUS }
+
+	modifier = {
+		pop_housing_usage_mult = 0.2
+	}
+}
+
+trait_gas_aromatic = {
+	icon = "gfx/interface/icons/traits/trait_gas_aromatic.dds"
+	cost = 2
+	opposites = { "trait_gas_sulfur" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		pop_cat_worker_happiness = 0.1
+	}
+}
+
+trait_gas_sulfur = {
+	icon = "gfx/interface/icons/traits/trait_gas_sulfur.dds"
+	cost = -2
+	opposites = { "trait_gas_aromatic" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.1
+		pop_cat_worker_happiness = -0.1
+	}
+}
+
+trait_ionic_bonds = {
+	icon = "gfx/interface/icons/traits/trait_ionic_bonds.dds"
+	cost = 2
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.20
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_beta_decay = {
+	icon = "gfx/interface/icons/traits/trait_beta_decay.dds"
+	cost = -1
+	opposites = { "trait_stable" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		species_empire_size_mult = 0.10
+		army_damage_mult = 0.05
+	}	
+}
+
+trait_stable = {
+	icon = "gfx/interface/icons/traits/trait_stable.dds"
+	cost = 2
+	opposites = { "trait_beta_decay" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		species_empire_size_mult = -0.10
+	}
+}
+
+trait_combust = {
+	icon = "gfx/interface/icons/traits/trait_combust.dds"
+	cost = -1
+	opposites = { "trait_non_combust" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		pop_environment_tolerance = -0.20
+		army_damage_mult = 0.05
+	}
+}
+
+trait_non_combust = {
+	icon = "gfx/interface/icons/traits/trait_non_combust.dds"
+	cost = 1
+	opposites = { "trait_combust" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		pop_environment_tolerance = 0.10
+	}
+}
+
+trait_complex = {
+	icon = "gfx/interface/icons/traits/trait_complex.dds"
+	cost = 2
+	opposites = { "trait_simple" }
+	allowed_archetypes = { GASEOUS }
+	modification = yes
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_simple = {
+	icon = "gfx/interface/icons/traits/trait_simple.dds"
+	cost = -1
+	opposites = { "trait_complex" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		species_leader_exp_gain = -0.25
+		pop_resettlement_cost_mult = -0.2
+	}
+}
+
+trait_good_work_ethic = {
+	icon = "gfx/interface/icons/traits/trait_good_work_ethic.dds"
+	cost = 2
+	opposites = { "trait_poor_work_ethic" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.10
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_poor_work_ethic = {
+	icon = "gfx/interface/icons/traits/trait_poor_work_ethic.dds"
+	cost = -2
+	opposites = { "trait_good_work_ethic" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_minerals_produces_mult = -0.05
+		planet_pops_consumer_goods_upkeep_mult = 0.10
+	}
+}
+
+trait_nitrogen_rich = {
+	icon = "gfx/interface/icons/traits/trait_nitrogen_rich.dds"
+	cost = 2
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+
+
+trait_five_bond = {
+	icon = "gfx/interface/icons/traits/trait_five_bond.dds"
+	cost = 4
+	advanced_trait = yes
+	initial = no
+	randomized = no
+	opposites = { "trait_single_bond" "trait_high_pressure" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		army_damage_mult = 0.5
+		pop_environment_tolerance = 0.30
+		planet_jobs_produces_mult = 0.15
+		leader_age = 25
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+trait_neural_multiplex = {
+	icon = "gfx/interface/icons/traits/trait_neural_multiplex.dds"
+	cost = 4
+	improves_leaders = yes
+	advanced_trait = yes
+	initial = no
+	randomized = no
+	opposites = { "trait_simple" "trait_high_pressure" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		planet_researchers_produces_mult = 0.3
+		leader_skill_levels = 2
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+trait_high_pressure = {
+	icon = "gfx/interface/icons/traits/trait_high_pressure.dds"
+	cost = 4
+	advanced_trait = yes
+	initial = no
+	randomized = no
+	opposites = { "trait_high_enegry" "trait_five_bond" "trait_neural_multiplex" }
+	allowed_archetypes = { GASEOUS }
+	modifier = {
+		pop_environment_tolerance = 0.20
+		planet_jobs_minerals_produces_mult = 0.6
+	}
+	slave_cost = {
+		energy = 200
+	}
+}

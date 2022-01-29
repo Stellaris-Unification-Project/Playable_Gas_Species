@@ -1,0 +1,12 @@
+#on_press_begin = {
+#	events = {
+#		gasengine.01
+#	}
+#}
+#empire_init_capital_planet
+
+on_game_start_country = {
+	events = {
+		gasengine.01
+	}
+}

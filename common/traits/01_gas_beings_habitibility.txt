@@ -1,0 +1,28 @@
+@gas_primary = 1
+@gas_secondary = 0.50
+@gas_tertiary = 0
+
+trait_pc_habitable_gas_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gas_preference.dds"
+	allowed_archetypes = { GASEOUS }
+	sorting_priority = 30
+	initial = no
+	modification = no
+	randomized = no
+	modifier = {
+		pc_habitable_gas_habitability = @gas_primary
+		
+		pc_desert_habitability = @gas_tertiary	
+		pc_arid_habitability = @gas_tertiary
+		pc_savannah_habitability = @gas_tertiary
+		pc_tropical_habitability = @gas_tertiary
+		pc_continental_habitability = @gas_tertiary
+		pc_tundra_habitability = @gas_tertiary
+		pc_arctic_habitability = @gas_tertiary
+		pc_ocean_habitability = @gas_tertiary
+		pc_alpine_habitability = @gas_tertiary
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
